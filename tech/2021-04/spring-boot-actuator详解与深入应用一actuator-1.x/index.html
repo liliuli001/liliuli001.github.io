@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head><script src="/livereload.js?port=443&amp;mindelay=10&amp;v=2" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="LiuliuLi">
+  <meta name="description" content="《Spring Boot Actuator详解与深入应用》预计包括三篇，第一篇重点讲Spring Boot Actuator 1.x的应用与定制端点；第二篇将会对比Spring Boot Actuator 2.x 与1.x的区别，以及应用和定制2.x的端点；第三篇将会介绍Actuator metric指标与Prometheus和Grafana的使用结合。这部分内容很常用，且较为入门，欢迎大家的关注。 Actuator是什么 Spring Boot Actuator提供了生产上经常用到的功能">
+  
+  <meta property="og:title" content="Spring Boot Actuator详解与深入应用（一）：Actuator 1.x" />
+<meta property="og:description" content="《Spring Boot Actuator详解与深入应用》预计包括三篇，第一篇重点讲Spring Boot Actuator 1.x的应用与定制端点；第二篇将会对比Spring Boot Actuator 2.x 与1.x的区别，以及应用和定制2.x的端点；第三篇将会介绍Actuator metric指标与Prometheus和Grafana的使用结合。这部分内容很常用，且较为入门，欢迎大家的关注。 Actuator是什么 Spring Boot Actuator提供了生产上经常用到的功能" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liliuli001.github.io:443/tech/2021-04/spring-boot-actuator%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E4%B8%80actuator-1.x/" />
+<meta property="article:published_time" content="2021-04-03T10:01:15+08:00" />
+<meta property="article:modified_time" content="2021-04-03T10:01:15+08:00" />
+
+
+
+  <title>
+  
+       Spring Boot Actuator详解与深入应用（一）：Actuator 1.x | LiuliuLi 
+  
+  </title>
+
+  <link rel="canonical" href="https://liliuli001.github.io:443/tech/2021-04/spring-boot-actuator%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E4%B8%80actuator-1.x/">
+
+  
+  
+
+  
+  <link href="https://liliuli001.github.io:443/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://liliuli001.github.io:443/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://liliuli001.github.io:443/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://liliuli001.github.io:443/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://liliuli001.github.io:443/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://liliuli001.github.io:443/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://liliuli001.github.io:443/img/liu.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://liliuli001.github.io:443/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://liliuli001.github.io:443/">
+          
+        <img class="avatar" src="https://liliuli001.github.io:443/img/liu.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> LiuliuLi</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://liliuli001.github.io:443/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://liliuli001.github.io:443/tech/" >技术  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://liliuli001.github.io:443/sci-tech/" >Science  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://liliuli001.github.io:443/about/" >关于  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://liliuli001.github.io:443/img/header-slides/222.jpeg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://liliuli001.github.io:443/img/header-slides//slides.jpeg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://liliuli001.github.io:443/">
+          
+            <img class="pull-right avatar avatar-md" src="https://liliuli001.github.io:443/img/avatar.jpeg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://liliuli001.github.io:443/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>LiuliuLi</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+            
+              <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/profile.php?id=100001597502469" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="//twitter.com/ZhengZiou" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:qingting.best@foxmail.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://liliuli001.github.io:443/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 微服务 </a></li>
+      
+    
+    
+      
+        <li><a href="https://liliuli001.github.io:443/series/%E5%BE%AE%E6%9C%8D%E5%8A%A1"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>《微服务》</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">Spring Boot Actuator详解与深入应用（一）：Actuator 1.x</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Apr 3, 2021</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>6 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <blockquote>
+<p>《Spring Boot Actuator详解与深入应用》预计包括三篇，第一篇重点讲Spring Boot Actuator 1.x的应用与定制端点；第二篇将会对比Spring Boot Actuator 2.x 与1.x的区别，以及应用和定制2.x的端点；第三篇将会介绍Actuator metric指标与Prometheus和Grafana的使用结合。这部分内容很常用，且较为入门，欢迎大家的关注。</p>
+</blockquote>
+<h2 id="actuator是什么">Actuator是什么</h2>
+<p>Spring Boot Actuator提供了生产上经常用到的功能（如健康检查，审计，指标收集，HTTP跟踪等），帮助我们监控和管理Spring Boot应用程序。这些功能都可以通过JMX或HTTP端点访问。</p>
+<p>通过引入相关的依赖，即可监控我们的应用程序，收集指标、了解流量或数据库的状态变得很简单。该库的主要好处是我们可以获得生产级工具，而无需自己实际实现这些功能。与大多数Spring模块一样，我们可以通过多种方式轻松配置或扩展它。</p>
+<p>Actuator还可以与外部应用监控系统集成，如Prometheus，Graphite，DataDog，Influx，Wavefront，New Relic等等。 这些系统为您提供出色的仪表板，图形，分析和警报，以帮助我们在一个统一界面监控和管理应用服务。</p>
+<p>本文将会介绍Spring Boot Actuator 1.x 包括其中的端点（HTTP端点）、配置管理以及扩展和自定义端点。</p>
+<h2 id="快速开始">快速开始</h2>
+<p>引入如下的依赖：</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml">        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div><h2 id="spring-boot-actuator-1x">Spring Boot Actuator 1.x</h2>
+<p>在1.x中，Actuator遵循读写模型，这意味着我们可以从中读取信息或写入信息。我们可以检索指标或我们的应用程序的健康状况，当然我们也可以优雅地终止我们的应用程序或更改我们的日志配置。Actuator通过Spring MVC暴露其HTTP端点。</p>
+<h3 id="端点">端点</h3>
+<p>当引入的Actuator的版本为1.x时，启动应用服务，可以控制台输出如下的端点信息：</p>
+<p><img src="http://image.blueskykong.com/actuator-1.x.jpg" alt=""></p>
+<p>我们介绍一下常用的endpoints：</p>
+<ul>
+<li>/health：显示应用程序运行状况信息（通过未经身份验证的连接访问时的简单“状态”或经过身份验证时的完整消息详细信息），它默认不敏感</li>
+<li>/info：显示应用程序信息，默认情况下不敏感</li>
+<li>/metrics：显示当前应用程序的“指标”信息，它默认也很敏感</li>
+<li>/trace：显示跟踪信息（默认情况下是最后几个HTTP请求）</li>
+</ul>
+<p>有些端点默认并不会被开启，如/shutdown。</p>
+<h3 id="配置端点">配置端点</h3>
+<p>我们可以自定义每个端点的属性，按照如下的格式：</p>
+<pre><code>endpoints.[endpoint name].[property to customize]
+</code></pre><p>可以自定义的属性有如下三个：</p>
+<ul>
+<li>id，暴露的http端点地址</li>
+<li>enabled，是否开启</li>
+<li>sensitive，当为true时，需要认证之后才会通过http获取到敏感信息</li>
+</ul>
+<p>我们在配置文件中增加如下的配置，将会定制/beans端点。</p>
+<pre><code>endpoints.beans.id=springbeans
+endpoints.beans.sensitive=false
+endpoints.beans.enabled=true
+</code></pre><h3 id="health端点">/health端点</h3>
+<p>/health端点用于监控运行的服务实例状态，当服务实例下线或者因为其他的原因变得异常（如DB连接不上，磁盘缺少空间）时，将会及时通知运维人员。</p>
+<p>在默认未授权的情况下，通过HTTP的方式仅会返回如下的简单信息：</p>
+<pre><code>{
+	&quot;status&quot;: &quot;UP&quot;
+}
+</code></pre><h4 id="获取详细的health信息">获取详细的health信息</h4>
+<p>我们进行如下的配置：</p>
+<pre><code>endpoints:
+  health:
+    id: chealth
+    sensitive: false
+
+management.security.enabled: false
+</code></pre><p>如上一小节所述，我们更改了/health端点的访问路径为/chealth，并将安全授权关闭。访问<code>http://localhost:8005/chealth</code>将会得到如下的结果。</p>
+<pre><code>{
+	&quot;status&quot;: &quot;UP&quot;,
+	&quot;healthCheck&quot;: {
+		&quot;status&quot;: &quot;UP&quot;
+	},
+	&quot;diskSpace&quot;: {
+		&quot;status&quot;: &quot;UP&quot;,
+		&quot;total&quot;: 999995129856,
+		&quot;free&quot;: 762513104896,
+		&quot;threshold&quot;: 10485760
+	}
+}
+</code></pre><h4 id="自定义health的信息">自定义health的信息</h4>
+<p>我们还可以定制实现health指示器。它可以收集特定于应用程序的任何类型的自定义运行状况数据，并通过/health端点访问到定义的信息。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HealthCheck</span> <span class="kd">implements</span> <span class="n">HealthIndicator</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Health</span> <span class="nf">health</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">errorCode</span> <span class="o">=</span> <span class="n">check</span><span class="o">();</span> <span class="c1">// perform some specific health check
+</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="n">errorCode</span> <span class="o">!=</span> <span class="n">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">Health</span><span class="o">.</span><span class="na">down</span><span class="o">()</span>
+                    <span class="o">.</span><span class="na">withDetail</span><span class="o">(</span><span class="s">&#34;Error Code&#34;</span><span class="o">,</span> <span class="n">errorCode</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">Health</span><span class="o">.</span><span class="na">up</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">check</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Our logic to check health
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>实现<code>HealthIndicator</code>接口，并覆写其中的<code>health()</code>方法即可自定义我们的/health端点。</p>
+<h3 id="info端点">/info端点</h3>
+<p>通过/info端点，我们可以为应用服务定义一些基本信息：</p>
+<pre><code>info.app.name=Spring Sample Application
+info.app.description=This is my first spring boot application
+info.app.version=1.0.0
+</code></pre><p>我们在如上的配置中定义了服务名、描述和服务的版本号。</p>
+<h3 id="metrics端点">/metrics端点</h3>
+<p>/metrics端点展示了OS、JVM和应用级别的指标信息。当开启之后，我们可以获取内存、堆、线程、线程池、类加载和HTTP等信息。</p>
+<pre><code>{
+	&quot;mem&quot;: 417304,
+	&quot;mem.free&quot;: 231678,
+	&quot;processors&quot;: 4,
+	&quot;instance.uptime&quot;: 248325,
+	&quot;uptime&quot;: 250921,
+	&quot;systemload.average&quot;: 1.9541015625,
+	&quot;heap.committed&quot;: 375296,
+	&quot;heap.init&quot;: 393216,
+	&quot;heap.used&quot;: 143617,
+	&quot;heap&quot;: 5592576,
+	&quot;nonheap.committed&quot;: 43104,
+	&quot;nonheap.init&quot;: 2496,
+	&quot;nonheap.used&quot;: 42010,
+	&quot;nonheap&quot;: 0,
+	&quot;threads.peak&quot;: 30,
+	&quot;threads.daemon&quot;: 18,
+	&quot;threads.totalStarted&quot;: 46,
+	&quot;threads&quot;: 20,
+	&quot;classes&quot;: 6020,
+	&quot;classes.loaded&quot;: 6020,
+	&quot;classes.unloaded&quot;: 0,
+	&quot;gc.ps_scavenge.count&quot;: 3,
+	&quot;gc.ps_scavenge.time&quot;: 35,
+	&quot;gc.ps_marksweep.count&quot;: 1,
+	&quot;gc.ps_marksweep.time&quot;: 29,
+	&quot;httpsessions.max&quot;: -1,
+	&quot;httpsessions.active&quot;: 0,
+	&quot;gauge.response.info&quot;: 38.0,
+	&quot;counter.status.200.info&quot;: 1
+}
+</code></pre><h4 id="定制metrics端点">定制metrics端点</h4>
+<p>为了收集自定义的metrics，Actuator支持单数值记录的功能，简单的增加/减少计数功能。如下的实现，我们将登录成功和失败的次数作为自定义指标记录下来。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">LoginServiceImpl</span> <span class="kd">implements</span> <span class="n">LoginService</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">CounterService</span> <span class="n">counterService</span><span class="o">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">public</span> <span class="nf">LoginServiceImpl</span><span class="o">(</span><span class="n">CounterService</span> <span class="n">counterService</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">counterService</span> <span class="o">=</span> <span class="n">counterService</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">login</span><span class="o">(</span><span class="n">String</span> <span class="n">userName</span><span class="o">,</span> <span class="kt">char</span><span class="o">[]</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">boolean</span> <span class="n">success</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">userName</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&#34;admin&#34;</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="s">&#34;secret&#34;</span><span class="o">.</span><span class="na">toCharArray</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">password</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">counterService</span><span class="o">.</span><span class="na">increment</span><span class="o">(</span><span class="s">&#34;counter.login.success&#34;</span><span class="o">);</span>
+            <span class="n">success</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">counterService</span><span class="o">.</span><span class="na">increment</span><span class="o">(</span><span class="s">&#34;counter.login.failure&#34;</span><span class="o">);</span>
+            <span class="n">success</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">success</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>再次访问/metrics，发现多了如下的指标信息。登录尝试和其他安全相关事件在Actuator中可用作审计事件。</p>
+<pre><code>{
+	&quot;gauge.response.metrics&quot;: 2.0,
+	&quot;gauge.response.test&quot;: 3.0,
+	&quot;gauge.response.star-star.favicon.ico&quot;: 1.0,
+	&quot;counter.status.200.star-star.favicon.ico&quot;: 10,
+	&quot;counter.status.200.test&quot;: 6,
+	&quot;counter.login.failure&quot;: 6,
+	&quot;counter.status.200.metrics&quot;: 4
+}
+</code></pre><h3 id="自定义端点">自定义端点</h3>
+<p>除了使用Spring Boot Actuator提供的端点，我们也可以定义一个全新的端点。</p>
+<p>首先，我们需要实现<code>Endpoint</code>接口：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomEndpoint</span> <span class="kd">implements</span> <span class="n">Endpoint</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">&#34;custom&#34;</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEnabled</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isSensitive</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">invoke</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Custom logic to build the output
+</span><span class="c1"></span>        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">messages</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+        <span class="n">messages</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;This is message 1&#34;</span><span class="o">);</span>
+        <span class="n">messages</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;This is message 2&#34;</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">messages</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><code>getId()</code>方法用于匹配访问这个端点，当我们访问/custom时，将会调用<code>invoke()</code>我们自定义的逻辑。
+另外两个方法，用于设置是否开启和是否为敏感的端点。</p>
+<pre><code>[ &quot;This is message 1&quot;, &quot;This is message 2&quot; ]
+</code></pre><h3 id="进一步定制">进一步定制</h3>
+<p>出于安全考虑，我们可能选择通过非标准端口暴露Actuator端点。通过management.port属性来配置它。</p>
+<p>另外，正如我们已经提到的那样，在1.x. Actuator基于Spring Security配置自己的安全模型，但独立于应用程序的其余部分。</p>
+<p>因此，我们可以更改management.address属性以限制可以通过网络访问端点的位置：</p>
+<div class="highlight"><pre class="chroma"><code class="language-yml" data-lang="yml"><span class="c">#port used to expose actuator</span><span class="w">
+</span><span class="w"></span><span class="l">management.port=8081</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c">#CIDR allowed to hit actuator</span><span class="w">
+</span><span class="w"></span><span class="l">management.address=127.0.0.1</span><span class="w">
+</span></code></pre></div><p>此外，除了/info端点，其他所有的端点默认都是敏感的，如果引入了Spring Security，我们通过在配置文件中定义这些安全的属性（username, password, role）来确保内置端点的安全。</p>
+<h2 id="总结">总结</h2>
+<p>Spring Boot Actuator为我们的应用服务在生产环境提供了很多开箱即用的功能。本文主要讲解了Spring Boot Actuator 1.x的深入使用。我们既可以使用内置的端点（如/health，/info等），可以在这些端点的基础进行扩展和定制，还可以自定义全新的端点，在使用方式上显得非常灵活。</p>
+<h3 id="参考">参考</h3>
+<ol>
+<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html">Actuator docs</a></li>
+<li><a href="https://www.baeldung.com/spring-boot-actuators#boot-1x-actuator">Spring Boot Actuator</a></li>
+</ol>
+<h3 id="版本控制">版本控制</h3>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Action</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Init</td>
+<td>2021-04-03</td>
+</tr>
+</tbody>
+</table>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://liliuli001.github.io:443/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://liliuli001.github.io:443/tags/spring-boot" role="button">Spring Boot </a></li>
+      
+    
+      <li><a href="https://liliuli001.github.io:443/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1" role="button">微服务 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://liliuli001.github.io:443/tech/2021-03/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%89%E5%85%A8%E5%B1%80%E8%BF%87%E6%BB%A4%E5%99%A8-nettyroutingfilter/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>深入解析微服务网关Spring Cloud Gateway（三十三）全局过滤器-NettyRoutingFilter</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://liliuli001.github.io:443/tech/2021-04/spring-boot-actuator%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E4%BA%8Cactuator-2.x/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Spring Boot Actuator详解与深入应用（二）：Actuator 2.x</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#actuator%e6%98%af%e4%bb%80%e4%b9%88">
+												 Actuator是什么
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b">
+												 快速开始
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#spring-boot-actuator-1x">
+												 Spring Boot Actuator 1.x
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ab%af%e7%82%b9">
+												 端点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%85%8d%e7%bd%ae%e7%ab%af%e7%82%b9">
+												 配置端点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#health%e7%ab%af%e7%82%b9">
+												 /health端点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%8e%b7%e5%8f%96%e8%af%a6%e7%bb%86%e7%9a%84health%e4%bf%a1%e6%81%af">
+												 获取详细的health信息
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%87%aa%e5%ae%9a%e4%b9%89health%e7%9a%84%e4%bf%a1%e6%81%af">
+												 自定义health的信息
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#info%e7%ab%af%e7%82%b9">
+												 /info端点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#metrics%e7%ab%af%e7%82%b9">
+												 /metrics端点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%ae%9a%e5%88%b6metrics%e7%ab%af%e7%82%b9">
+												 定制metrics端点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%ab%af%e7%82%b9">
+												 自定义端点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%bf%9b%e4%b8%80%e6%ad%a5%e5%ae%9a%e5%88%b6">
+												 进一步定制
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%80%bb%e7%bb%93">
+												 总结
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%8f%82%e8%80%83">
+												 参考
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6">
+												 版本控制
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+    
+      <a href="//linkedin.com/in/ziouzheng" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/profile.php?id=100001597502469" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="//twitter.com/ZhengZiou" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:qingting.best@foxmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2021 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://liliuli001.github.io:443/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://liliuli001.github.io:443/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://liliuli001.github.io:443/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://liliuli001.github.io:443/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://liliuli001.github.io:443/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://liliuli001.github.io:443/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://liliuli001.github.io:443/js/main.js"></script>
+
+
+
+  
+  <script src="https://liliuli001.github.io:443/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

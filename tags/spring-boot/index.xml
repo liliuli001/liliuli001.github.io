@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring Boot on LiuliuLi</title>
+    <link>https://liliuli001.github.io:443/tags/spring-boot/</link>
+    <description>Recent content in Spring Boot on LiuliuLi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Sun, 25 Apr 2021 10:01:15 +0800</lastBuildDate><atom:link href="https://liliuli001.github.io:443/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot Actuator详解与深入应用（二）：Actuator 2.x</title>
+      <link>https://liliuli001.github.io:443/tech/2021-04/spring-boot-actuator%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E4%BA%8Cactuator-2.x/</link>
+      <pubDate>Sun, 25 Apr 2021 10:01:15 +0800</pubDate>
+      
+      <guid>https://liliuli001.github.io:443/tech/2021-04/spring-boot-actuator%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E4%BA%8Cactuator-2.x/</guid>
+      <description>《Spring Boot Actuator详解与深入应用》预计包括三篇，第一篇重点讲Spring Boot Actuator 1.x的应用与定制端点；第二篇将会对比Spring Boot Actuator 2.x 与1.x的区别，以及应用和定制2.x的端点；第三篇将会介绍Actuator metric指标与Prometheus和Grafana的使用结合。这部分内容很常用，且较为入门，欢迎大家的关注。 前文回顾 本文系《Spring Boot Actuator详解与深入应用》中的第</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot Actuator详解与深入应用（一）：Actuator 1.x</title>
+      <link>https://liliuli001.github.io:443/tech/2021-04/spring-boot-actuator%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E4%B8%80actuator-1.x/</link>
+      <pubDate>Sat, 03 Apr 2021 10:01:15 +0800</pubDate>
+      
+      <guid>https://liliuli001.github.io:443/tech/2021-04/spring-boot-actuator%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E4%B8%80actuator-1.x/</guid>
+      <description>《Spring Boot Actuator详解与深入应用》预计包括三篇，第一篇重点讲Spring Boot Actuator 1.x的应用与定制端点；第二篇将会对比Spring Boot Actuator 2.x 与1.x的区别，以及应用和定制2.x的端点；第三篇将会介绍Actuator metric指标与Prometheus和Grafana的使用结合。这部分内容很常用，且较为入门，欢迎大家的关注。 Actuator是什么 Spring Boot Actuator提供了生产上经常用到的功能</description>
+    </item>
+    
+  </channel>
+</rss>
