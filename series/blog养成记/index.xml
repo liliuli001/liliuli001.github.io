@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog养成记 on QingTing</title>
+    <title>Blog养成记 on LiuliuLi</title>
     <link>https://liliuli001.github.io:443/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/</link>
-    <description>Recent content in Blog养成记 on QingTing</description>
+    <description>Recent content in Blog养成记 on LiuliuLi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Sat, 25 Aug 2018 22:59:59 +0800</lastBuildDate><atom:link href="https://liliuli001.github.io:443/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
@@ -86,69 +86,6 @@
       
       <guid>https://liliuli001.github.io:443/sci-tech/2018-08/blog%E5%85%BB%E6%88%90%E8%AE%B08-%E9%A1%B5%E9%9D%A2%E8%AE%BE%E8%AE%A1demo/</guid>
       <description>实际上前几个月就已经将页面原型设计完成，中间经过需求梳理和页面demo两个部分，不过设计完后就停滞了不少时间。最近才又开始折腾静态页面，在公司也尝试搭一个简单网站（尝试了flask，最后还是回归hugo生成静态页面），所以为了能将之后的部分继续，所以赶紧补上。 需求梳理 首先需要将应用场景进行梳理，细化需求，还特地做了对应的思维导图明确所需要的功能。 需求场景方面主要是以下几个点： 生活类：能满足基本的博</description>
-    </item>
-    
-    <item>
-      <title>Blog养成记(7) Hugo多级列表无法显示? —— Cocoa主题的Markdown bug合集</title>
-      <link>https://liliuli001.github.io:443/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B07-hugo%E5%A4%9A%E7%BA%A7%E5%88%97%E8%A1%A8%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA-cocoa%E4%B8%BB%E9%A2%98%E7%9A%84markdown-bug%E5%90%88%E9%9B%86/</link>
-      <pubDate>Tue, 20 Mar 2018 16:46:17 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B07-hugo%E5%A4%9A%E7%BA%A7%E5%88%97%E8%A1%A8%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA-cocoa%E4%B8%BB%E9%A2%98%E7%9A%84markdown-bug%E5%90%88%E9%9B%86/</guid>
-      <description>前言 又一次开始折腾Markdown了，不过这一次是因为好好的md文件，在typora中显示的好好的，但在Hugo渲染后格式就不对了，引起我这次探究主要问题在多级列表。考虑到毕竟两个软件的markdown渲染引擎不同，我并没有用到很特别的语法。之前在引用上也碰到了问题，typora中能很好地识别我想要的引用段落，但是Hugo不行。所以这次探究下是哪里出了问题，以及对应的解决方案。 既然已经提到了mar</description>
-    </item>
-    
-    <item>
-      <title>Blog养成记(6) Hugo中的LaTeX渲染</title>
-      <link>https://liliuli001.github.io:443/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B06-hugo%E4%B8%AD%E7%9A%84latex%E6%B8%B2%E6%9F%93/</link>
-      <pubDate>Mon, 19 Mar 2018 22:33:45 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B06-hugo%E4%B8%AD%E7%9A%84latex%E6%B8%B2%E6%9F%93/</guid>
-      <description>Hugo本身并不支持(\LaTeX)，但可以通过javascript进行渲染。Hugo官网提供了多种方法，由于这篇博客我决定选择(\KaTeX)，而不是MathJax。</description>
-    </item>
-    
-    <item>
-      <title>Blog养成记(5) 要让Github Pages被索引到</title>
-      <link>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B05-%E8%A6%81%E8%AE%A9github-pages%E8%A2%AB%E7%B4%A2%E5%BC%95%E5%88%B0/</link>
-      <pubDate>Sun, 28 Jan 2018 22:04:23 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B05-%E8%A6%81%E8%AE%A9github-pages%E8%A2%AB%E7%B4%A2%E5%BC%95%E5%88%B0/</guid>
-      <description>居然都找不到！ 其实Blog我主要是用来做一些记录，更何况忙起来经常不更新，因此尽管有加上一些流量统计的功能，但实际上也不怎么关心到底有多少访问量。在浏览网上其他人的博客布局寻找灵感时，突然看到有博客提到GitHub Pages屏蔽了百度的爬虫，所以百度是搜索不到GitHub Pages上的网页的。 什么？所以百度搜索搜不到我的个人博客？不死心，尝试一下，找得到github、gist主页，但是就是找不到g</description>
-    </item>
-    
-    <item>
-      <title>Blog养成记(4) Hugo中增加tags等分类</title>
-      <link>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B04-hugo%E4%B8%AD%E5%A2%9E%E5%8A%A0tags%E7%AD%89%E5%88%86%E7%B1%BB/</link>
-      <pubDate>Tue, 09 Jan 2018 18:22:25 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B04-hugo%E4%B8%AD%E5%A2%9E%E5%8A%A0tags%E7%AD%89%E5%88%86%E7%B1%BB/</guid>
-      <description>自定义分类 Hugo是支持用户自定义分类的，这个称为taxonomy，可以来对网页内容进行逻辑划分，详情可以在这里查看。 分类taxonomy有3个概念： Taxonomy 分类: 可以用来对内容进行分类的类别 Term 术语: 分类的一个键 Value 值: 分配给这个Term的具体内容 例如我需要增加3个分类，分别是： tag：文章标签 topic：文章主题/文章系列 category：文章分类 以tag为例，则对应Taxonomy是tag，Term是</description>
-    </item>
-    
-    <item>
-      <title>Blog养成记(3) Hugo的语法高亮配置</title>
-      <link>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B03-hugo%E7%9A%84%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Tue, 09 Jan 2018 17:52:25 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B03-hugo%E7%9A%84%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE%E9%85%8D%E7%BD%AE/</guid>
-      <description>前言 Hugo官网在这里给出了详细的语法高亮配置说明。 一般有以下几种常见方法： 使用Hugo默认Chroma (弃，一些代码无法高亮) 使用Pygments (弃，一些代码无法高亮) 使用Highlight Shortcode (弃，高亮颜色渲染问题) 使用Highlight.js ✔️ 使用Pygments进行高亮 Hugo从0.28版本开始默认使用Chroma来作语法高亮。Chroma使用go编写的，渲染速度很快。 如果需要使用Pyg</description>
-    </item>
-    
-    <item>
-      <title>Blog养成记(2) Hugo&#43;Docker在Github上建立Blog</title>
-      <link>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B02-hugo-docker%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E7%AB%8Bblog/</link>
-      <pubDate>Sun, 07 Jan 2018 11:05:25 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B02-hugo-docker%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E7%AB%8Bblog/</guid>
-      <description>Introduction 正如上一篇说的，我选择了Hugo作为静态网页生成器。Hugo是一个用go写的静态网页生成器，它被提及最多的优点就是它生成网站的速度快。此外，Hugo的安装配置看上去也并不麻烦，直接在这里选择合适的版本和环境下载对应release版并配置环境变量即可。整体来说非常方便。 在决定使用Hugo之外，我还决定用Docker来做环境配置。因为新买了mac，不愿意弄乱环境，也希望以后能够跨平台使用，方便配置，</description>
-    </item>
-    
-    <item>
-      <title>Blog养成记(1) Preface</title>
-      <link>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B01-preface/</link>
-      <pubDate>Mon, 01 Jan 2018 16:05:25 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/sci-tech/2018-01/blog%E5%85%BB%E6%88%90%E8%AE%B01-preface/</guid>
-      <description>初始 养个Blog的想法从很早就有了，但是&amp;hellip; 从本科开始就一直想要一个自己的Blog，一直没有行动。本身我没有记日记的习惯，也没有需求和冲动写下什么，本科虽然有时想记下学下的内容，但笔记就够了，也没写什么技术博客的想法。除了很久之前偶尔在qq空间或者人人po两篇直抒胸臆的文章，也就没有其他了。此外，虽说博客最重要的是内容，但没有一个好的生态环境和前端界面设计，至少对于我来说，没有兴趣花时</description>
     </item>
     
   </channel>

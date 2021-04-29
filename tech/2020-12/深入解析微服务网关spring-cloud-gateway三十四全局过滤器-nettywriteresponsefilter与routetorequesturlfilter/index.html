@@ -6,7 +6,7 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
-  <meta name="author" content="QingTing">
+  <meta name="author" content="LiuliuLi">
   <meta name="description" content="新的组件解析系列文章《微服务网关 Spring Cloud Gageway解析》的介绍与深入讲解。欢迎关注、转发、评论。 NettyWriteResponseFilter 与NettyRoutingFilter成对使用。“预”过滤阶段没有任何内容，因为CLIENT_RESPONSE_ATTR在WebHandler运行之前不会被添加。 @Override public Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) { return chain.filter(exchange).then(Mono.defer(() -&gt; { HttpClientResponse clientResponse = exchange.getAttribute(CLIENT_RESPONSE_ATTR); if (clientResponse == null) { return Mono.empty(); } ServerHttpResponse response = exchange.getResponse(); //将响应写到客户端 NettyDataBufferFactory factory = (NettyDataBufferFactory) response.bufferFactory(); final Flux&lt;NettyDataBuffer&gt; body = clientResponse.receive() .retain() .map(factory::wrap); MediaType contentType = response.getHeaders().getContentType(); return (isStreamingMediaType(contentType) ? response.writeAndFlushWith(body.map(Flux::just)) : response.writeWith(body)); })); } 如果Server">
   
   <meta property="og:title" content="深入解析微服务网关Spring Cloud Gateway（三十四）全局过滤器-NettyWriteResponseFilter与RouteToRequestUrlFilter" />
@@ -20,7 +20,7 @@
 
   <title>
   
-       深入解析微服务网关Spring Cloud Gateway（三十四）全局过滤器-NettyWriteResponseFilter与RouteToRequestUrlFilter | QingTing 
+       深入解析微服务网关Spring Cloud Gateway（三十四）全局过滤器-NettyWriteResponseFilter与RouteToRequestUrlFilter | LiuliuLi 
   
   </title>
 
@@ -91,7 +91,7 @@
           
         <img class="avatar" src="https://liliuli001.github.io:443/img/liu.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
         
-        <strong> QingTing</strong>
+        <strong> LiuliuLi</strong>
       </a>
 
       
@@ -153,7 +153,7 @@
 
         
         <div class="carousel-item active">
-          <div class="view" style="background-image: url('https://liliuli001.github.io:443/img/header-slides/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view" style="background-image: url('https://liliuli001.github.io:443/img/header-slides/222.jpeg'); background-repeat: no-repeat; background-size: cover;">
 
             
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -209,7 +209,7 @@
       <div class="col-12 col-sm-7 text-left pl-2">
         <a href="https://liliuli001.github.io:443/">
           <h1 class="mb-2 h1" style="font-weight: 300;" >
-            <strong>QingTing</strong>
+            <strong>LiuliuLi</strong>
           </h1>
         </a>
         

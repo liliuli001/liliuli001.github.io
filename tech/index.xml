@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tech on QingTing</title>
+    <title>tech on LiuliuLi</title>
     <link>https://liliuli001.github.io:443/tech/</link>
-    <description>Recent content in tech on QingTing</description>
+    <description>Recent content in tech on LiuliuLi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Tue, 18 Sep 2018 23:51:34 +0800</lastBuildDate><atom:link href="https://liliuli001.github.io:443/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>深入解析微服务网关Spring Cloud Gateway（三十三）全局过滤器-NettyRoutingFilter</title>
-      <link>https://liliuli001.github.io:443/tech/2021-01/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%89%E5%85%A8%E5%B1%80%E8%BF%87%E6%BB%A4%E5%99%A8-nettyroutingfilter/</link>
-      <pubDate>Fri, 15 Jan 2021 10:01:15 +0800</pubDate>
+      <link>https://liliuli001.github.io:443/tech/2021-04/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%89%E5%85%A8%E5%B1%80%E8%BF%87%E6%BB%A4%E5%99%A8-nettyroutingfilter/</link>
+      <pubDate>Thu, 15 Apr 2021 10:01:15 +0800</pubDate>
       
-      <guid>https://liliuli001.github.io:443/tech/2021-01/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%89%E5%85%A8%E5%B1%80%E8%BF%87%E6%BB%A4%E5%99%A8-nettyroutingfilter/</guid>
+      <guid>https://liliuli001.github.io:443/tech/2021-04/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%89%E5%85%A8%E5%B1%80%E8%BF%87%E6%BB%A4%E5%99%A8-nettyroutingfilter/</guid>
       <description>系新的组件解析系列文章《微服务网关 Spring Cloud Gageway解析》的介绍与深入讲解。欢迎关注、转发、评论。 NettyRoutingFilter 如果位于ServerWebExchangeUtils.GATEWAY_REQUEST_URL_ATTR请求属性中的URL具有http或https前缀，Netty路由过滤器将运行。 它使用Netty HttpClient进行下游代理请求。 响应放在ServerWebExchangeUtils.CLIENT_</description>
     </item>
     
     <item>
       <title>深入解析微服务网关Spring Cloud Gateway（三十七）API 接口详解</title>
-      <link>https://liliuli001.github.io:443/tech/2021-01/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%83api-%E6%8E%A5%E5%8F%A3%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Sun, 03 Jan 2021 10:01:15 +0800</pubDate>
+      <link>https://liliuli001.github.io:443/tech/2021-04/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%83api-%E6%8E%A5%E5%8F%A3%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sat, 03 Apr 2021 10:01:15 +0800</pubDate>
       
-      <guid>https://liliuli001.github.io:443/tech/2021-01/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%83api-%E6%8E%A5%E5%8F%A3%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://liliuli001.github.io:443/tech/2021-04/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3spring-cloud-gateway%E4%B8%89%E5%8D%81%E4%B8%83api-%E6%8E%A5%E5%8F%A3%E8%AF%A6%E8%A7%A3/</guid>
       <description>系新的组件解析系列文章《微服务网关 Spring Cloud Gageway解析》的介绍与深入讲解。欢迎关注、转发、评论。 在前面的一篇文章，我们介绍了 Spring Cloud 的API 端点概览。网关一共提供了7个内置端点。分别为： /actuator/gateway/routes/{id},methods=[DELETE]，删除单个路由 /actuator/gateway/routes/{id},methods=[POST]，增加单个路由 /act</description>
     </item>
     
@@ -563,285 +563,6 @@
       
       <guid>https://liliuli001.github.io:443/tech/2019-01/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E5%9B%9B%E5%92%8Cresttemplate%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8/</guid>
       <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 和RestTemplate一起使用 在前面快速入门一节中已经说明了Ribbon和RestTemplate之间的关系，而使二者产生联系的就是@LoadBalanced注解。@LoadBalanced是一个标记注解，可以表明被修饰的RestTemplate应该使用RibbonLoadBalancerClient来发送HTTP请求。Rib</description>
-    </item>
-    
-    <item>
-      <title>深入解析负载均衡组件 Ribbon（三）源码解析之配置和实例初始化</title>
-      <link>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%89%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8B%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
-      <pubDate>Thu, 27 Dec 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%89%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8B%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
-      <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 配置和实例初始化 @RibbonClient用来声明Ribbon Client，用来声明Ribbon client的名称和配置，标记一个@Configuration的配置类，进行Ribbon相关的配置。@RibbonClient还会importRibbonClientConfigurationRegistrar类来进行动态的BeanDe</description>
-    </item>
-    
-    <item>
-      <title>深入解析负载均衡组件 Ribbon（二）快速入门</title>
-      <link>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%BA%8C%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
-      <pubDate>Wed, 26 Dec 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%BA%8C%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
-      <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 快速入门 Ribbon可以和RestTemplate一起使用，也可以集成到Feign中使用。下面两小结将会分别讲述Ribbon在这两种使用方法下的示例。 RestTemplate是Spring的同步客户端HTTP请求接口，它可以简化客户端与HTTP服务器之间的交互，并且它强制使用RESTful风格，它会处理HTTP连接，只需要使用者提</description>
-    </item>
-    
-    <item>
-      <title>深入解析负载均衡组件 Ribbon（一）总体介绍</title>
-      <link>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%80%E6%80%BB%E4%BD%93%E4%BB%8B%E7%BB%8D/</link>
-      <pubDate>Thu, 06 Dec 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%80%E6%80%BB%E4%BD%93%E4%BB%8B%E7%BB%8D/</guid>
-      <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 Ribbon是一个可以管理Http和TCP客户端的客户端负载均衡器。Feign已经在使用Ribbon了，如果你使用过@FeignClient,那么Ribbon也会被使用。 Ribbon的核心思想就是named client，也就是带有名称的Ribbon Client。每个Client由可配置的组件构成，负责一类服务的调用请求。Sprin</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （完结） 高可用性服务注册中心(Eureka服务端集群)</title>
-      <link>https://liliuli001.github.io:443/tech/2018-11/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%AE%8C%E7%BB%93-%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83eureka%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%9B%86%E7%BE%A4/</link>
-      <pubDate>Mon, 26 Nov 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-11/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%AE%8C%E7%BB%93-%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83eureka%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%9B%86%E7%BE%A4/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 高可用性服务注册中心(Eureka服务端集群) Eureka Server可以变得更有弹性和高可用性，通过部署多个注册中心的实例，并让它们之间互相注册。在Standalone模式中，只能依赖Server和Client之间的缓存以及需要弹性的机制保证Server实例一直存活，单例的注册中心崩了，Client之间就很难互相发现和调用。 在</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （二十四）应用进阶之服务端配置</title>
-      <link>https://liliuli001.github.io:443/tech/2018-11/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%BA%94%E7%94%A8%E8%BF%9B%E9%98%B6%E4%B9%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Tue, 06 Nov 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-11/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%BA%94%E7%94%A8%E8%BF%9B%E9%98%B6%E4%B9%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 Eureka Server也是一个Eureka Client，但在此处我们更关心Eureka Server内相关配置，该部分配置主要位于EurekaServerConfigBean，但是Eureka Server中作为一个可开箱即用服务注册中心，一般不建议修改默认的Server配置(Eureka Server中有部分根据ServerCon</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （二十三）应用进阶之客户端配置</title>
-      <link>https://liliuli001.github.io:443/tech/2018-10/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E4%B8%89%E5%BA%94%E7%94%A8%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Tue, 16 Oct 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-10/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E4%B8%89%E5%BA%94%E7%94%A8%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 配置详解 通过上一大节的源码的分析，相信对Eureka的运行机制已经有了进一步的了解。现在需要对Eureka的相关配置进行了解。首先会对Eureka中的大部分属性进行介绍，然后根据需要着重介绍一些关键的配置使用 Eureka在spring-cloud中主要靠3个配置类进行实现默认配置，EurekaClientConfigB</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （二十二）PeerEurekaNodes Server 对等集群</title>
-      <link>https://liliuli001.github.io:443/tech/2018-10/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E4%BA%8Cpeereurekanodes-server-%E5%AF%B9%E7%AD%89%E9%9B%86%E7%BE%A4/</link>
-      <pubDate>Tue, 02 Oct 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-10/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E4%BA%8Cpeereurekanodes-server-%E5%AF%B9%E7%AD%89%E9%9B%86%E7%BE%A4/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 同步冲突 对于Eureka Server之间的HTTP以及批任务流交互过程，在此不多关注，有兴趣的读者可以细细去研读代码了解一下。以下需要在意的是Eureka Server在接受到对应的同步复制请求后如何修改自身的注册表信息，以及反馈给发起同步复制请求的Eureka Server。 这里首先明确一个概念，InstanceInfo</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （二十一）Eureka Server之间的注册表信息的同步复制</title>
-      <link>https://liliuli001.github.io:443/tech/2018-09/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E4%B8%80eureka-server%E4%B9%8B%E9%97%B4%E7%9A%84%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BF%A1%E6%81%AF%E7%9A%84%E5%90%8C%E6%AD%A5%E5%A4%8D%E5%88%B6/</link>
-      <pubDate>Wed, 19 Sep 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-09/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81%E4%B8%80eureka-server%E4%B9%8B%E9%97%B4%E7%9A%84%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BF%A1%E6%81%AF%E7%9A%84%E5%90%8C%E6%AD%A5%E5%A4%8D%E5%88%B6/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 Server之间的注册表信息的同步复制 在PeerAwareInstanceRegistryImpl中，对Abstractinstanceregistry中的register()、cancel()、renew()等方法都添加了同步到PeerEurekaNode的操作，使Server集群中的注册表保持最终一致性。 @Override public boolean cancel(final String</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十九）Eureka Server集群同步</title>
-      <link>https://liliuli001.github.io:443/tech/2018-08/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B9%9Deureka-server%E9%9B%86%E7%BE%A4%E5%90%8C%E6%AD%A5/</link>
-      <pubDate>Tue, 28 Aug 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-08/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B9%9Deureka-server%E9%9B%86%E7%BE%A4%E5%90%8C%E6%AD%A5/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 在Eureka Server启动的过程中(EurekaBootStrap)，会进行initEurekaEnvironment()以及initEurekaServerContext()，initEurekaEnvironment()方法中初始化各种环境变量，在此不多加关注，在initEurekaServerContext(</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （二十）PeerEurekaNodes Server 对等集群</title>
-      <link>https://liliuli001.github.io:443/tech/2018-08/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81peereurekanodes-server-%E5%AF%B9%E7%AD%89%E9%9B%86%E7%BE%A4/</link>
-      <pubDate>Sat, 04 Aug 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-08/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E5%8D%81peereurekanodes-server-%E5%AF%B9%E7%AD%89%E9%9B%86%E7%BE%A4/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 PeerEurekaNodes Server 对等集群 PeerEurekaNodes中管理PeerEurekaNode的集合，每一个PeerEurekaNode代表的就是一个可同步共享数据的Eureka Server。在PeerEurekaNode中，具有register()、cancel()、heartbeat()、statusUpdate()等诸多用于向pe</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十八） Eureka Server 自我保护</title>
-      <link>https://liliuli001.github.io:443/tech/2018-08/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E5%85%AB-eureka-server-%E8%87%AA%E6%88%91%E4%BF%9D%E6%8A%A4/</link>
-      <pubDate>Sat, 04 Aug 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-08/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E5%85%AB-eureka-server-%E8%87%AA%E6%88%91%E4%BF%9D%E6%8A%A4/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 自我保护 在上面的解析中，多次提到过了自我保护机制，下面对此作一定的补充介绍。 以下是euerka官网中对自我保护的描述： In Netflix, the above safeguard is called as self-preservation mode and is primarily used as a protection in scenarios where there is a network partition between a group of clients and the Eureka Server. In these scenarios, the server tries to protect the information it already has. There may be scenarios in case of a mass outage that this may cause the clients to get the instances that do not exist anymore. The clients must make sure they are resilient to eureka server returning an instance that is non-existent or un-responsive. The best protection in these scenarios is to timeout quickly</description>
-    </item>
-    
-    <item>
-      <title>每周Paper精读(2) Sentence Representation系列泛读</title>
-      <link>https://liliuli001.github.io:443/tech/2018-07/%E6%AF%8F%E5%91%A8paper%E7%B2%BE%E8%AF%BB2-sentence-representation%E7%B3%BB%E5%88%97%E6%B3%9B%E8%AF%BB/</link>
-      <pubDate>Mon, 30 Jul 2018 17:41:23 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-07/%E6%AF%8F%E5%91%A8paper%E7%B2%BE%E8%AF%BB2-sentence-representation%E7%B3%BB%E5%88%97%E6%B3%9B%E8%AF%BB/</guid>
-      <description>前言 原本计划是每周一篇论文精读，然而实际上由于项目上安排较紧，距离上一次论文精读已经过了几个月。现在项目算是告一段落，在项目中也算是找到一些问题所在，正在看感兴趣的论文（这期是赶不上了）。正好媛源的实习生肖风顺正在做关于句向量的调研，找了些相关论文，我也旁听了两次，顺便就把这两次旁听的结果记录一下，顺便也对其中内容也简要的过一遍大概思路，虽然这样算不上什么“论文精读”，但本来精读和泛读就要结合么😄</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十七） Eureka Server服务剔除</title>
-      <link>https://liliuli001.github.io:443/tech/2018-07/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B8%83-eureka-server%E6%9C%8D%E5%8A%A1%E5%89%94%E9%99%A4/</link>
-      <pubDate>Mon, 23 Jul 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-07/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B8%83-eureka-server%E6%9C%8D%E5%8A%A1%E5%89%94%E9%99%A4/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 服务剔除 如果服务在注册后，既没有续约，也没有下线(服务崩溃或者网络异常等原因)，那么服务的状态就处于未可知的状态，不能保证能够从该服务中获取到回馈，所以需要服务剔除evict()来定时清理这些不稳定的服务，该方法会将注册表中所有过期的租约全部剔除。 @Override public void evict() { evict(0l); } public void evict(long additionalLeaseMs) { // 自我保护相关，如果出现该状态，不允许剔除服务 if</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十六） Eureka Server服务续约</title>
-      <link>https://liliuli001.github.io:443/tech/2018-07/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E5%85%AD-eureka-server%E6%9C%8D%E5%8A%A1%E7%BB%AD%E7%BA%A6/</link>
-      <pubDate>Tue, 03 Jul 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-07/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E5%85%AD-eureka-server%E6%9C%8D%E5%8A%A1%E7%BB%AD%E7%BA%A6/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 服务续约 接着上一篇文章，我么来看下服务续约 renew()方法，即单纯的续租操作，不像register()方法携带了服务实例信息InstanceInfo，仅更新Server中的注册表的租约的时间。 public boolean renew(String appName, String id, boolean isReplication) { RENEW.increment(isReplication); // 根据appName获取到服务集群的租约集合 Map&amp;lt;String, Lease&amp;lt;InstanceInfo&amp;gt;&amp;gt; gMap = registry.get(appName); Lease&amp;lt;InstanceInfo&amp;gt; leaseToRenew = null; if (gMap != null) { leaseToRenew = gMap.get(id); } // 租约不存在，直接返回fa</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十五） Eureka Server 服务注册</title>
-      <link>https://liliuli001.github.io:443/tech/2018-06/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%BA%94-eureka-server-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</link>
-      <pubDate>Wed, 20 Jun 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-06/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%BA%94-eureka-server-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 服务注册 // AbstractInstanceRegistry public void register(InstanceInfo registrant, int leaseDuration, boolean isReplication) { try { // 获取读锁 read.lock(); // 这里的registry是 // ConcurrentHashMap&amp;lt;String, Map&amp;lt;String, Lease&amp;lt;InstanceInfo&amp;gt;&amp;gt;&amp;gt; registry // 根据appName对服务实例集群进行分类 Map&amp;lt;String, Lease&amp;lt;InstanceInfo&amp;gt;&amp;gt; gMap = registry.get(registrant.getAppName()); REGISTER.increment(isReplication); if (gMap == null) { final ConcurrentHashMap&amp;lt;String, Lease&amp;lt;InstanceInfo&amp;gt;&amp;gt; gNewMap = new ConcurrentHashMap&amp;lt;String, Lease&amp;lt;InstanceInfo&amp;gt;&amp;gt;(); // 这里有一个比较严谨操作的，防止在添加新的服务实例集群租约时把已有其他的线程 // 添加的集群租约覆盖掉， // 这与putIfAbsent的机制相关 // 如果存在该键值，直</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十四）服务端核心代码</title>
-      <link>https://liliuli001.github.io:443/tech/2018-06/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E5%9B%9B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/</link>
-      <pubDate>Thu, 14 Jun 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-06/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E5%9B%9B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 服务端核心代码 在Eureka中，eureka-server模块是通过eureka-client、eureka-core、以及eureka-resource(eureka-server运行JSP界面)三个模块打包而成，由于euerka-client已经在上一节进行了较为完整的介绍，所以服务端核心代码主要位于eureka-</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十三） Eureka Server 配置类介绍</title>
-      <link>https://liliuli001.github.io:443/tech/2018-05/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B8%89-eureka-server-%E9%85%8D%E7%BD%AE%E7%B1%BB%E4%BB%8B%E7%BB%8D/</link>
-      <pubDate>Thu, 24 May 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-05/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B8%89-eureka-server-%E9%85%8D%E7%BD%AE%E7%B1%BB%E4%BB%8B%E7%BB%8D/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 Eureka Server 配置类介绍 从spring-cloud-starter-netflix-eureka-server的spring.factories中 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\ org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration 可以发现EurekaServerAutoConfiguration配置文件被激活。 打开SpringBoot的Debug模式： logging:level:org.springfram</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十二）服务下线</title>
-      <link>https://liliuli001.github.io:443/tech/2018-05/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%BA%8C%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%BA%BF/</link>
-      <pubDate>Sat, 12 May 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-05/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%BA%8C%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%BA%BF/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 服务下线 到此为止，已经通过DiscoveryClient的构造方法，遍历了DiscoveryClient上基本所有方法，也了解Eureka Client如何服务发现(fetchRegistry()拉取Eureka Server上的注册表信息，之后通过定时任务CacheRefreshThread定时拉取)，服务注册(第一次注</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十一）服务注册与服务按需注册</title>
-      <link>https://liliuli001.github.io:443/tech/2018-04/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B8%80%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%8C%89%E9%9C%80%E6%B3%A8%E5%86%8C/</link>
-      <pubDate>Sat, 21 Apr 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-04/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E4%B8%80%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%8C%89%E9%9C%80%E6%B3%A8%E5%86%8C/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 服务注册与服务按需注册 介绍到这里，似乎发现Eureka Client的与Eureka Server的服务注册和发现基本上都是实现了，但是好像缺了点什么，如果Eureka Client的InstanceInfo中的信息发生改变时(例如status发生改变)，是不是应该更新在Server上的注册表中的服务实例的信息？ 重新回到in</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （十）注册表缓存刷新定时器与续租(心跳)定时器</title>
-      <link>https://liliuli001.github.io:443/tech/2018-04/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E7%BB%AD%E7%A7%9F%E5%BF%83%E8%B7%B3%E5%AE%9A%E6%97%B6%E5%99%A8/</link>
-      <pubDate>Wed, 11 Apr 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-04/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%8D%81%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E7%BB%AD%E7%A7%9F%E5%BF%83%E8%B7%B3%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 注册表缓存刷新定时器与续租(心跳)定时器 很明显，服务注册应该是一个持续的过程，所以DiscoveryClient中通过一个定时任务完成，不间断地与Eureka Server进行通信，维持自己在注册表上的租约。 在initScheduledTasks()方法中初始化了两个定时器任务，一个用于刷新本地注册表的信息，一个用于注册</description>
-    </item>
-    
-    <item>
-      <title>慢学Docker(3) Docker Hub速度蜗牛爬怎么办?</title>
-      <link>https://liliuli001.github.io:443/tech/2018-03/%E6%85%A2%E5%AD%A6docker3-docker-hub%E9%80%9F%E5%BA%A6%E8%9C%97%E7%89%9B%E7%88%AC%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
-      <pubDate>Tue, 20 Mar 2018 23:47:17 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-03/%E6%85%A2%E5%AD%A6docker3-docker-hub%E9%80%9F%E5%BA%A6%E8%9C%97%E7%89%9B%E7%88%AC%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
-      <description>前言 其实两三个月前使用docker hub不管push还是pull虽然算不上光速但也不错。但今天修铭哥问我关于docker的使用，直接用Dockerfile建镜像不知道为什么成功不了，于是想直接pull我已经上传到docker hub中的镜像，结果就这1.3G左右的东西，下了整整一天。其中某layer就52M也能下半天。 晚上回家想下vue的docker镜像，几个四五十M的layer也慢悠悠下着，终于确</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （九）Eureka 客户端增量式拉取注册表信息</title>
-      <link>https://liliuli001.github.io:443/tech/2018-03/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B9%9Deureka-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A2%9E%E9%87%8F%E5%BC%8F%E6%8B%89%E5%8F%96%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BF%A1%E6%81%AF/</link>
-      <pubDate>Sun, 11 Mar 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-03/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B9%9Deureka-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A2%9E%E9%87%8F%E5%BC%8F%E6%8B%89%E5%8F%96%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BF%A1%E6%81%AF/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 增量式拉取注册表信息 接着查看一下增量式的拉取方式，一般发生在第一次拉取注册表信息之后，拉取的信息定义为从某一段时间之后发生的所有变更的信息，通常来讲是3分钟，在获取到更新的delta，会根据delta中的增量更新对本地的数据进行更新，与getAndStoreFullRegistry()一样，也通过fetchRegist</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （八）Eureka 客户端拉取信息</title>
-      <link>https://liliuli001.github.io:443/tech/2018-03/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%85%ABeureka-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8B%89%E5%8F%96%E4%BF%A1%E6%81%AF/</link>
-      <pubDate>Wed, 07 Mar 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-03/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%85%ABeureka-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8B%89%E5%8F%96%E4%BF%A1%E6%81%AF/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 从Eureka Server中拉取注册表信息 通过如下的逻辑判断： if (clientConfig.shouldFetchRegistry() &amp;amp;&amp;amp; !fetchRegistry(false)) { fetchRegistryFromBackup(); } 如果EurekaClientConfig.shouldFetchRegistry()为true时，那么fetchRegistry()方法将会被调用，，在Eureka Client向Eureka Server注册前，需要先从Eureka Server拉</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （七）Eureka 客户端的服务注册与发现</title>
-      <link>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B8%83eureka-%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/</link>
-      <pubDate>Tue, 27 Feb 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B8%83eureka-%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 客户端的服务注册与发现 在DiscoveryClient的代码中，有实现服务注册与发现的功能的具体代码。在DiscoveryClient构造函数中，Eureka Client会执行从Eureka Server中拉取注册表信息，注册自身等操作。 DiscoveryClient的构造函数如下： DiscoveryClient(ApplicationInfoManager applicationInfoManager, EurekaClientConfig config, AbstractDiscoveryClientOptionalArgs args, Provider&amp;lt;BackupRegistry&amp;gt; backupRegistryProvider) Application</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （六） Eureka Client 客户端核心代码</title>
-      <link>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%85%AD-eureka-client-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/</link>
-      <pubDate>Mon, 26 Feb 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%85%AD-eureka-client-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 包结构 主要的代码位于eureka-client中，项目的module为eureka-client，版本为v1.8.7，这是Finchley版本的Spring Cloud所依赖的eureka版本 包结构如下 简要的包介绍: com.netflix.appinfo: 主要是关于eureka-client的配置信息类，如上面提及的EurekaInstanceConfig，</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （五） Eureka Client 源码分析</title>
-      <link>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%94-eureka-client-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</link>
-      <pubDate>Tue, 20 Feb 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%94-eureka-client-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 在Finchley版本的SpringCloud中，不需要添加任何的额外的注解就可以登记为Eureka Client，只需要在pom文件中添加spring-cloud-starter-netflix-eureka-client的依赖。 为了跟踪Eureka的运行机制，读者可以打开SpringBoot的Debug模式来查看更多</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （四） Eureka 核心架构图</title>
-      <link>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%9B%9B-eureka-%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%E5%9B%BE/</link>
-      <pubDate>Fri, 16 Feb 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E5%9B%9B-eureka-%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%E5%9B%BE/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 核心架构图 目前SpringCloud的Finchley版本中采用的Eureka的版本的为1.8，本部分的架构图主要基于Eureka 1.0的进行介绍。 这幅图来自于Eureka的官方提供的架构图，GitHub地址为https://github.com/Netflix/eureka，下面将对这里的概念以及工作过程进行介绍，以</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （三）微服务接入 Eureka </title>
-      <link>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B8%89%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%85%A5-eureka/</link>
-      <pubDate>Mon, 12 Feb 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B8%89%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%85%A5-eureka/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 与服务注册中心交换信息 当一个服务实例拥有DiscovryClient就可以从Eureka Server中发现其他的服务实例，以下例子在Eureka Client注入一个DiscoveryClient，并从Eureka Server获取服务实例的信息。 在chapter2-eureka-client添加一个ServiceInst</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （二）使用 Eureka 作为服务发现组件</title>
-      <link>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E4%BD%BF%E7%94%A8-eureka-%E4%BD%9C%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E7%BB%84%E4%BB%B6/</link>
-      <pubDate>Thu, 08 Feb 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-02/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%BA%8C%E4%BD%BF%E7%94%A8-eureka-%E4%BD%9C%E4%B8%BA%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E7%BB%84%E4%BB%B6/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 搭建Eureka服务注册中心 可以通过Idea快速搭建包含Eurake Server依赖的SpringBoot项目 主要依赖 &amp;lt;dependency&amp;gt;// eureka-client相关依赖&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;spring-cl</description>
-    </item>
-    
-    <item>
-      <title>Docker for datascience: 从纠结到放弃</title>
-      <link>https://liliuli001.github.io:443/tech/2018-02/docker-for-datascience-%E4%BB%8E%E7%BA%A0%E7%BB%93%E5%88%B0%E6%94%BE%E5%BC%83/</link>
-      <pubDate>Tue, 06 Feb 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-02/docker-for-datascience-%E4%BB%8E%E7%BA%A0%E7%BB%93%E5%88%B0%E6%94%BE%E5%BC%83/</guid>
-      <description>表示我是不纠结不死星人。 先是由jupyter stacks突发奇想，于是纠结于想建立属于自己的docker族系，特别是用来做数据科学&amp;amp;机器学习。想要不用Anaconda、甚至不用conda，自己按照使用习惯安装我自己需要的包、想使用最小的alpine作为基镜像，因此开始走上不归路。 想要使用bash而不是ash，想要默认调用bash，想要调用bash时能默认出现现在使用用户及现在所在文件夹。折</description>
-    </item>
-    
-    <item>
-      <title>服务发现：Spring Cloud Netflix Eureka （一）介绍</title>
-      <link>https://liliuli001.github.io:443/tech/2018-01/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B8%80%E4%BB%8B%E7%BB%8D/</link>
-      <pubDate>Fri, 26 Jan 2018 12:32:58 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-01/%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0spring-cloud-netflix-eureka-%E4%B8%80%E4%BB%8B%E7%BB%8D/</guid>
-      <description>系列文章《Spring Cloud Netflix Eureka》的介绍与深入讲解。欢迎关注、转发、评论。 在传统的单体应用中，组件之间的调用通过有规范约束的接口进行，实现不同模块间良好协作。在微服务架构中，原本的“巨石”应用按照业务被分割成相对独立的、提供特定功能的微服务，每一个微服务都可以通过集群或者其他方式进行动态的扩展，每一个微服务实例的网络地址都可能动态变化，这使得原本通过硬编码地址的调用方式失去了作用。微服务架构</description>
     </item>
     
   </channel>

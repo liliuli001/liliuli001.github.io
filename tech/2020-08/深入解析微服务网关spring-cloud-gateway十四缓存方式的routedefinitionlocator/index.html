@@ -6,7 +6,7 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
-  <meta name="author" content="QingTing">
+  <meta name="author" content="LiuliuLi">
   <meta name="description" content="系新的组件解析系列文章《微服务网关 Spring Cloud Gageway解析》的介绍与深入讲解。欢迎关注、转发、评论。 缓存方式的RouteDefinitionLocator 该路由定义定位器结合了缓存，使用时需要传入具体的代理定位器，通过CAS操作获取完整的路由定义信息。 public class CachingRouteDefinitionLocator implements RouteDefinitionLocator { private final RouteDefinitionLocator delegate; private final AtomicReference&lt;List&lt;RouteDefinition&gt;&gt; cachedRoutes = new AtomicReference&lt;&gt;(); public CachingRouteDefinitionLocator(RouteDefinitionLocator delegate) { this.delegate = delegate; //原子类中提供的CAS操作，设置给定的更新值到当前值。 this.cachedRoutes.compareAndSet(null, collectRoutes()); } private List&lt;RouteDefinition&gt; collectRoutes() { return this.delegate.getRouteDefinitions().collectList().block(); } @Override public Flux&lt;RouteDefinition&gt; getRouteDefinitions() { return Flux.fromIterable(this.cachedRoutes.get()); } //... } 由于赋">
   
   <meta property="og:title" content="深入解析微服务网关Spring Cloud Gateway（十四）缓存方式的RouteDefinitionLocator" />
@@ -20,7 +20,7 @@
 
   <title>
   
-       深入解析微服务网关Spring Cloud Gateway（十四）缓存方式的RouteDefinitionLocator | QingTing 
+       深入解析微服务网关Spring Cloud Gateway（十四）缓存方式的RouteDefinitionLocator | LiuliuLi 
   
   </title>
 
@@ -91,7 +91,7 @@
           
         <img class="avatar" src="https://liliuli001.github.io:443/img/liu.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
         
-        <strong> QingTing</strong>
+        <strong> LiuliuLi</strong>
       </a>
 
       
@@ -153,7 +153,7 @@
 
         
         <div class="carousel-item active">
-          <div class="view" style="background-image: url('https://liliuli001.github.io:443/img/header-slides/leaf.jpg'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view" style="background-image: url('https://liliuli001.github.io:443/img/header-slides/222.jpeg'); background-repeat: no-repeat; background-size: cover;">
 
             
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -209,7 +209,7 @@
       <div class="col-12 col-sm-7 text-left pl-2">
         <a href="https://liliuli001.github.io:443/">
           <h1 class="mb-2 h1" style="font-weight: 300;" >
-            <strong>QingTing</strong>
+            <strong>LiuliuLi</strong>
           </h1>
         </a>
         

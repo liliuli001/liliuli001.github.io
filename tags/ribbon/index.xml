@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ribbon on QingTing</title>
+    <title>Ribbon on LiuliuLi</title>
     <link>https://liliuli001.github.io:443/tags/ribbon/</link>
-    <description>Recent content in Ribbon on QingTing</description>
+    <description>Recent content in Ribbon on LiuliuLi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Wed, 01 May 2019 10:01:15 +0800</lastBuildDate><atom:link href="https://liliuli001.github.io:443/tags/ribbon/index.xml" rel="self" type="application/rss+xml" />
@@ -95,33 +95,6 @@
       
       <guid>https://liliuli001.github.io:443/tech/2019-01/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E5%9B%9B%E5%92%8Cresttemplate%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8/</guid>
       <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 和RestTemplate一起使用 在前面快速入门一节中已经说明了Ribbon和RestTemplate之间的关系，而使二者产生联系的就是@LoadBalanced注解。@LoadBalanced是一个标记注解，可以表明被修饰的RestTemplate应该使用RibbonLoadBalancerClient来发送HTTP请求。Rib</description>
-    </item>
-    
-    <item>
-      <title>深入解析负载均衡组件 Ribbon（三）源码解析之配置和实例初始化</title>
-      <link>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%89%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8B%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
-      <pubDate>Thu, 27 Dec 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%89%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8B%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
-      <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 配置和实例初始化 @RibbonClient用来声明Ribbon Client，用来声明Ribbon client的名称和配置，标记一个@Configuration的配置类，进行Ribbon相关的配置。@RibbonClient还会importRibbonClientConfigurationRegistrar类来进行动态的BeanDe</description>
-    </item>
-    
-    <item>
-      <title>深入解析负载均衡组件 Ribbon（二）快速入门</title>
-      <link>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%BA%8C%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
-      <pubDate>Wed, 26 Dec 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%BA%8C%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
-      <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 快速入门 Ribbon可以和RestTemplate一起使用，也可以集成到Feign中使用。下面两小结将会分别讲述Ribbon在这两种使用方法下的示例。 RestTemplate是Spring的同步客户端HTTP请求接口，它可以简化客户端与HTTP服务器之间的交互，并且它强制使用RESTful风格，它会处理HTTP连接，只需要使用者提</description>
-    </item>
-    
-    <item>
-      <title>深入解析负载均衡组件 Ribbon（一）总体介绍</title>
-      <link>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%80%E6%80%BB%E4%BD%93%E4%BB%8B%E7%BB%8D/</link>
-      <pubDate>Thu, 06 Dec 2018 10:01:15 +0800</pubDate>
-      
-      <guid>https://liliuli001.github.io:443/tech/2018-12/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%BB%84%E4%BB%B6-ribbon%E4%B8%80%E6%80%BB%E4%BD%93%E4%BB%8B%E7%BB%8D/</guid>
-      <description>系列文章《Ribbon 解析》的介绍与深入讲解。欢迎关注、转发、评论。 Ribbon是一个可以管理Http和TCP客户端的客户端负载均衡器。Feign已经在使用Ribbon了，如果你使用过@FeignClient,那么Ribbon也会被使用。 Ribbon的核心思想就是named client，也就是带有名称的Ribbon Client。每个Client由可配置的组件构成，负责一类服务的调用请求。Sprin</description>
     </item>
     
   </channel>
